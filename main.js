@@ -76,7 +76,35 @@ document.addEventListener('keyup', (e) => {
 
 finalizado.addEventListener('click', ()=> {
   //tirar as bordas e um print da tela
+  let filhos = document.querySelectorAll('div');
+  filhos.forEach((item) => {
+    item.style.border = 'none';
+  });
+
+  gerarImagem();
+
+  
 })
+
+function gerarImagem(){           
+  html2canvas(container).then(function (canvas) {
+  var name = 'img-print';
+  let xhr = new XMLHttpRequest();
+  xhr.responseType = 'blob';
+  xhr.onload = function () {
+    let a = document.createElement('a');
+    a.href = window.URL.createObjectURL(xhr.response);
+    a.download = name + '.png';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    a.remove()
+  };
+  xhr.open('GET', canvas.toDataURL("image/png", 1.0));
+  xhr.send();
+});
+
+}
 
 btn.addEventListener('click', ()=> {
   container.innerText = '';
