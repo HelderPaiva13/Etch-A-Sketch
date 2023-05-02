@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('.btn');
+const finalizado = document.querySelector('.finalizado');
 const paleta = document.querySelector('.paleta');
 let isShiftDeyDown = false;
 let cor = "#000000";
@@ -46,8 +47,9 @@ const cores = [
   "#FF0000", "#CC0000", "#990033", 
   "#663300", "#996600", "#CC3300", 
   "#993300", "#990000", "#800000", 
-  "#993333", "#000000"];
-
+  "#993333", "#000000", "#808080",
+  "#6a6a6a", "#545454", "#3f3f3f",
+  "#2c2c2c","#191919",]
 
 cores.forEach(element => {
   let btnCor = document.createElement('button');
@@ -70,6 +72,10 @@ document.addEventListener('keyup', (e) => {
   if(!e.shiftKey) {
     isShiftDeyDown = false;
   }
+});
+
+finalizado.addEventListener('click', ()=> {
+  //tirar as bordas e um print da tela
 })
 
 btn.addEventListener('click', ()=> {
@@ -85,8 +91,8 @@ btn.addEventListener('click', ()=> {
 
 function a ( linhas, colunas) {
   container.setAttribute('style', `
-  width: 300px;
-  height: 300px;
+  width: 800px;
+  height: 800px;
   display: grid;
   grid-template-columns: repeat(${linhas}, 1fr);
   grid-template-rows: repeat(${colunas}, 1fr);

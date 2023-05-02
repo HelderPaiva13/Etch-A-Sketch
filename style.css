@@ -6,27 +6,37 @@ body {
   background-image: url("Public/javascript-1683038907637-3506.jpg");
   background-size: cover;
   font-family: "OCR A Std", monospace;
+  
 }
 
- div {
-  border: 0.0001rem solid gray;
+
+ .container div {
+  border: 0.0001em solid gray;
   background-color: white;
   
  }
 
  div .centro, .lateral, .inicio {
-  margin: 0.5rem;
   border: none;
  }
 
 .centro {
   border: 2px solid gray;
+  display: flex;
 }
 
 .lateral {
-  max-width: 100px;
-  display: flex;
-  flex-direction: column;
+  width: 300px;
+  heiht: 100%
+}
+
+.paleta button {
+  border: 1px solid white;
+  display: gride;
+  width: 2rem;
+  height: 2rem;
+  
+  
 }
 
 .content {
@@ -34,8 +44,10 @@ body {
   flex-direction: row;
 }
 
-.btn {
+.btn, .finalizado {
   margin-bottom: 2px;
+  font-size: 16px;
+  
 }
 
 p {
