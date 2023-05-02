@@ -9,11 +9,29 @@ body {
 }
 
  div {
-  border: 0.01rem solid gray;
+  border: 0.0001rem solid gray;
   background-color: white;
+  
  }
+
+ div .centro, .lateral, .inicio {
+  margin: 0.5rem;
+  border: none;
+ }
+
 .centro {
   border: 2px solid gray;
+}
+
+.lateral {
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
 }
 
 .btn {
@@ -23,5 +41,5 @@ body {
 p {
   border-radius: 5px;
   background-color: white;
-  font
+  
 }
