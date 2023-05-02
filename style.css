@@ -3,10 +3,25 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("Public/javascript-1683038907637-3506.jpg");
+  background-size: cover;
+  font-family: "OCR A Std", monospace;
 }
+
+ div {
+  border: 0.01rem solid gray;
+  background-color: white;
+ }
 .centro {
-  
-  border: 2px solid red;
- 
-  
+  border: 2px solid gray;
+}
+
+.btn {
+  margin-bottom: 2px;
+}
+
+p {
+  border-radius: 5px;
+  background-color: white;
+  font
 }
