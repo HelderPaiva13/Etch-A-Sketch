@@ -6,12 +6,17 @@ body {
   background-image: url("Public/javascript-1683038907637-3506.jpg");
   background-size: cover;
   font-family: "OCR A Std", monospace;
-  
+  font-weight: bold;
 }
 
 
  .container div {
   border: 0.0001em solid gray;
+  background-color: white;
+  
+ }
+ .container div:hover {
+  border: 0.0001em solid black;
   background-color: white;
   
  }
@@ -36,6 +41,12 @@ body {
   width: 2rem;
   height: 2rem;
   
+}
+.paleta button:hover {
+  border: 1px solid black;
+  display: gride;
+  width: 2rem;
+  height: 2rem;
   
 }
 
@@ -45,13 +56,29 @@ body {
 }
 
 .btn, .finalizado {
-  margin-bottom: 2px;
+  margin-bottom: 10px;
   font-size: 16px;
+  width: 8.7rem;
+  height: 2em;
+  border-radius: 10px;
+  
+}
+.btn:hover, .finalizado:hover {
+  background-color: 'white';
+  border: 2px solid black;
   
 }
 
 p {
-  border-radius: 5px;
-  background-color: white;
   
+  border-radius: 10px;
+  background-color: white;
+  padding: 1rem;
+  margin-left: 5rem;
+  font-size: 1rem;
+  
+}
+
+span {
+  color: red;
 }
